@@ -2,8 +2,11 @@ import React from "react";
 import Image from "next/image";
 import styles from "../../styles/Program.module.css";
 
-const DEFAULT_IMAGE_URL =
-  "https://techcrunch.com/wp-content/uploads/2019/09/Starship-Mk1-Day.jpg";
+// const DEFAULT_IMAGE_URL =
+//   "https://techcrunch.com/wp-content/uploads/2019/09/Starship-Mk1-Day.jpg";
+
+// To improve perfomance
+const DEFAULT_IMAGE_URL = "/default.webp";
 
 const Program = ({
   name,
@@ -24,6 +27,8 @@ const Program = ({
           src={missionImage}
           alt="SPACE X MISSION IMAGE"
           loading="lazy"
+          height="200px"
+          width="200px"
         />
         {/* <Image
           className={styles.ProgramImage}

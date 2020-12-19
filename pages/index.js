@@ -32,6 +32,10 @@ export default function Home() {
       <Head>
         <title>SpaceX launch programs</title>
         <link rel="icon" href="/favicon.ico" />
+        <meta
+          name="description"
+          content="This site talks about all the program launches of spaceX"
+        ></meta>
       </Head>
       {/* <ProgramContextProvider {...props}> */}
       <App />
