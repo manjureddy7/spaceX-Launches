@@ -1,7 +1,6 @@
 import React, { useState } from "react";
 import styles from "../../styles/FilterContainer.module.css";
 import Router, { useRouter } from "next/router";
-import { useProgramContext } from "../../context/ProgramContext";
 import { SUCCESSFUL_LAUNCH } from "./constants";
 
 const LaunchContainer = () => {
@@ -9,7 +8,6 @@ const LaunchContainer = () => {
   const router = useRouter();
   const [launchingState, setLaunchingState] = useState();
   const [activeState, setActiveState] = useState(false);
-  // const { launchDetails } = useProgramContext();
 
   // Pass query params to update URL
   const handleLaunchFilter = (launch) => {

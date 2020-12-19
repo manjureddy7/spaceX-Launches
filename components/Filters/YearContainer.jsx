@@ -1,7 +1,6 @@
 import React, { useState } from "react";
 import styles from "../../styles/FilterContainer.module.css";
 import Router, { useRouter } from "next/router";
-import { useProgramContext } from "../../context/ProgramContext";
 import { LAUNCH_YEAR } from "./constants";
 
 const YearContainer = () => {
@@ -10,7 +9,6 @@ const YearContainer = () => {
 
   // Get current queries and append to the existing one
   const router = useRouter();
-  // const { yearDetails } = useProgramContext();
 
   // Handle Year Filter
   // Based on Active state, update Router

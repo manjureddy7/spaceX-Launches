@@ -1,7 +1,6 @@
 import React, { useState, useEffect } from "react";
 import Program from "./Programs/Program";
 import styles from "../styles/ProgramContainer.module.css";
-import { useProgramContext } from "../context/ProgramContext";
 import { useRouter } from "next/router";
 import getLaunchPrograms from "./data/LaunchPrograms";
 
@@ -9,7 +8,6 @@ export const ProgramsContainer = () => {
   const router = useRouter();
   const [loading, setLoading] = useState(true);
   const [launchPrograms, setLaunchPrograms] = useState([]);
-  // const { programsDetails: launchPrograms } = useProgramContext();
   const { landing, launch, year } = router.query;
 
   useEffect(async () => {
