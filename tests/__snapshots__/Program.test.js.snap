@@ -1,0 +1,76 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Program Component Should match snapshot 1`] = `
+<DocumentFragment>
+  <div
+    class="ProgramContainer"
+  >
+    <div
+      class="ImageContainer"
+    >
+      <img
+        alt="SPACE X MISSION IMAGE"
+        class="ProgramImage"
+        loading="lazy"
+        src=""
+      />
+    </div>
+    <p
+      class="ProgramName"
+    >
+      Test Rocket  #
+    </p>
+    <div
+      class="ProgramLaunchDetails"
+    >
+      <strong>
+        Mission Ids: 
+      </strong>
+      <ul>
+        <li
+          class="ProgramDetails"
+        >
+          212
+        </li>
+      </ul>
+    </div>
+    <div
+      class="ProgramLaunchDetails"
+    >
+      <strong>
+        Launch Year:
+      </strong>
+       
+      <span
+        class="ProgramDetails"
+      >
+        2006
+      </span>
+    </div>
+    <div
+      class="ProgramLaunchDetails"
+    >
+      <strong>
+        Successful Launch: 
+        <span
+          class="ProgramDetails"
+        >
+          True
+        </span>
+      </strong>
+    </div>
+    <div
+      class="ProgramLaunchDetails"
+    >
+      <strong>
+        Successful Landing: 
+        <span
+          class="ProgramDetails"
+        >
+          False
+        </span>
+      </strong>
+    </div>
+  </div>
+</DocumentFragment>
+`;

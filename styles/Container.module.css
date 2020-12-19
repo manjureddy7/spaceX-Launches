@@ -1,0 +1,43 @@
+/* MOBILE FIRST APPROACH */
+
+.RootContainer {
+  display: flex;
+  flex-wrap: wrap;
+  flex-direction: column;
+}
+
+.LeftContainer {
+  flex: 100%;
+}
+
+.RightContainer {
+  flex: 100%;
+}
+
+@media screen and (min-width: 700px) and (max-width: 1440px) {
+  .RootContainer {
+    display: flex;
+    flex-wrap: nowrap;
+    flex-direction: row;
+  }
+  .LeftContainer {
+    flex: 30%;
+  }
+  .RightContainer {
+    flex: 70%;
+  }
+}
+
+@media screen and (min-width: 1440px) {
+  .RootContainer {
+    display: flex;
+    flex-wrap: nowrap;
+    flex-direction: row;
+  }
+  .LeftContainer {
+    flex: 30%;
+  }
+  .RightContainer {
+    flex: 70%;
+  }
+}

@@ -1,0 +1,59 @@
+.RootContainer {
+  background-color: white;
+  padding: 5px 10px;
+  margin: 10px;
+}
+
+.InnerContainer {
+  width: 100%;
+  position: relative;
+  margin-top: 10px;
+}
+
+.InnerContainerHeader {
+  display: flex;
+  justify-content: center;
+}
+
+.InnerContainerHeader::before {
+  content: "";
+  width: 200px;
+  height: 15px;
+  position: absolute;
+  top: 10px;
+  border-bottom: 1px solid black;
+}
+
+.GroupContainer {
+  display: flex;
+  flex-wrap: wrap;
+  margin-top: 15px;
+}
+
+.ButtonContainer {
+  flex: 45%;
+  display: flex;
+  justify-content: center;
+}
+
+.btn {
+  background-color: #cae1a9;
+  color: black;
+  outline: none;
+  padding: 10px;
+  cursor: pointer;
+  border: none;
+  width: 100%;
+  margin: 5px;
+}
+
+.active {
+  background-color: #7cbb01;
+  color: black;
+  outline: none;
+  padding: 10px;
+  cursor: pointer;
+  border: none;
+  width: 100%;
+  margin: 5px;
+}

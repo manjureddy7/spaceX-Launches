@@ -1,0 +1,33 @@
+.ProgramContainer {
+  background-color: white;
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+  margin: 10px;
+  width: 90%;
+  padding: 20px;
+}
+
+.ImageContainer {
+  display: flex;
+  justify-content: center;
+  background-color: #f2f2f2;
+}
+
+.ProgramImage {
+  height: 200px;
+  width: 90%;
+  margin: 10px;
+}
+
+.ProgramName {
+  color: #2a3084;
+}
+
+.ProgramLaunchDetails {
+  margin-bottom: 10px;
+}
+
+.ProgramDetails {
+  color: #6367a3;
+}

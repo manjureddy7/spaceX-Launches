@@ -1,65 +1,41 @@
-import Head from 'next/head'
-import styles from '../styles/Home.module.css'
+import Head from "next/head";
+import App from "../components/App";
+import { getLaunchPrograms } from "../data/Programs";
+import { ProgramContextProvider } from "../context/ProgramContext";
+import {
+  LAUNCH_YEAR,
+  SUCCESSFUL_LAUNCH,
+  SUCCESSFUL_LANDING,
+} from "../components/Filters/constants";
 
-export default function Home() {
+export const getServerSideProps = async (context) => {
+  const { landing, launch, year } = context.query;
+  const programsDetails = await getLaunchPrograms(landing, launch, year);
+
+  // TODOD Thought herre may be move api to apis folder
+  // let purl = "http://localhost:3000/api/data";
+  // const response = await fetch(purl).then((res) => res.json());
+  // console.log("response is", response);
+  return {
+    props: {
+      programsDetails,
+      yearDetails: LAUNCH_YEAR,
+      launchDetails: SUCCESSFUL_LAUNCH,
+      landDetails: SUCCESSFUL_LANDING,
+    },
+  };
+};
+
+export default function Home(props) {
   return (
-    <div className={styles.container}>
+    <div>
       <Head>
-        <title>Create Next App</title>
+        <title>SpaceX launch programs</title>
         <link rel="icon" href="/favicon.ico" />
       </Head>
-
-      <main className={styles.main}>
-        <h1 className={styles.title}>
-          Welcome to <a href="https://nextjs.org">Next.js!</a>
-        </h1>
-
-        <p className={styles.description}>
-          Get started by editing{' '}
-          <code className={styles.code}>pages/index.js</code>
-        </p>
-
-        <div className={styles.grid}>
-          <a href="https://nextjs.org/docs" className={styles.card}>
-            <h3>Documentation &rarr;</h3>
-            <p>Find in-depth information about Next.js features and API.</p>
-          </a>
-
-          <a href="https://nextjs.org/learn" className={styles.card}>
-            <h3>Learn &rarr;</h3>
-            <p>Learn about Next.js in an interactive course with quizzes!</p>
-          </a>
-
-          <a
-            href="https://github.com/vercel/next.js/tree/master/examples"
-            className={styles.card}
-          >
-            <h3>Examples &rarr;</h3>
-            <p>Discover and deploy boilerplate example Next.js projects.</p>
-          </a>
-
-          <a
-            href="https://vercel.com/import?filter=next.js&utm_source=create-next-app&utm_medium=default-template&utm_campaign=create-next-app"
-            className={styles.card}
-          >
-            <h3>Deploy &rarr;</h3>
-            <p>
-              Instantly deploy your Next.js site to a public URL with Vercel.
-            </p>
-          </a>
-        </div>
-      </main>
-
-      <footer className={styles.footer}>
-        <a
-          href="https://vercel.com?utm_source=create-next-app&utm_medium=default-template&utm_campaign=create-next-app"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Powered by{' '}
-          <img src="/vercel.svg" alt="Vercel Logo" className={styles.logo} />
-        </a>
-      </footer>
+      <ProgramContextProvider {...props}>
+        <App />
+      </ProgramContextProvider>
     </div>
-  )
+  );
 }
