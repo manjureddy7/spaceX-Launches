@@ -30,7 +30,7 @@ const LaunchContainer = () => {
   };
 
   return (
-    <div className={styles.InnerContainer}>
+    <div className={styles.InnerContainer} data-testid="LaunchContainer">
       <div className={styles.InnerContainerHeader}>Successful Launch</div>
       <div className={styles.GroupContainer}>
         {SUCCESSFUL_LAUNCH.map((launch, index) => (

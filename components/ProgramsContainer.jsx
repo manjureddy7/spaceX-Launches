@@ -5,7 +5,7 @@ import { useProgramContext } from "../context/ProgramContext";
 import { useRouter } from "next/router";
 import getLaunchPrograms from "./data/LaunchPrograms";
 
-const ProgramsContainer = () => {
+export const ProgramsContainer = () => {
   const router = useRouter();
   const [loading, setLoading] = useState(true);
   const [launchPrograms, setLaunchPrograms] = useState([]);

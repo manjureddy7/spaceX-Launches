@@ -32,7 +32,7 @@ const LandingContainer = () => {
   };
 
   return (
-    <div className={styles.InnerContainer}>
+    <div className={styles.InnerContainer} data-testid="LandingContainer">
       <div className={styles.InnerContainerHeader}>Successful Landing</div>
       <div className={styles.GroupContainer}>
         {SUCCESSFUL_LANDING.map((landing, index) => (

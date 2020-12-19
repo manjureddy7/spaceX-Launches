@@ -31,7 +31,7 @@ const YearContainer = () => {
     }
   };
   return (
-    <div className={styles.InnerContainer}>
+    <div className={styles.InnerContainer} data-testid="YearContainer">
       <div className={styles.InnerContainerHeader}>Launch Year</div>
       <div className={styles.GroupContainer}>
         {LAUNCH_YEAR.map((year, index) => (

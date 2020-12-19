@@ -6,7 +6,7 @@ import styles from "../styles/FilterContainer.module.css";
 
 const FilterContainer = () => {
   return (
-    <div className={styles.RootContainer}>
+    <div className={styles.RootContainer} data-testid="FilterContainer">
       <h2>Filters</h2>
       <YearContainer />
       <LaunchContainer />

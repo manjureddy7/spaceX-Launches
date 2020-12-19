@@ -11,8 +11,10 @@ exports[`Program Component Should match snapshot 1`] = `
       <img
         alt="SPACE X MISSION IMAGE"
         class="ProgramImage"
+        height="200px"
         loading="lazy"
         src=""
+        width="200px"
       />
     </div>
     <p
