@@ -1,6 +1,6 @@
 const DATA_URL = "https://api.spacexdata.com/v3/launches?limit=100";
 
-export const getLaunchPrograms = async (landing, launch, year) => {
+const getLaunchPrograms = async (landing, launch, year) => {
   let SPACEX_API_URL = DATA_URL;
   let url = new URL(SPACEX_API_URL);
 
@@ -25,3 +25,5 @@ export const getLaunchPrograms = async (landing, launch, year) => {
   const response = await jsonData.json();
   return response;
 };
+
+export default getLaunchPrograms;

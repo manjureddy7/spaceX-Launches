@@ -2,6 +2,7 @@ import React, { useState } from "react";
 import styles from "../../styles/FilterContainer.module.css";
 import Router, { useRouter } from "next/router";
 import { useProgramContext } from "../../context/ProgramContext";
+import { SUCCESSFUL_LANDING } from "./constants";
 
 const LandingContainer = () => {
   // Get current queries and append to the existing one
@@ -9,7 +10,7 @@ const LandingContainer = () => {
 
   const [landingState, setLandingState] = useState();
   const [activeState, setActiveState] = useState(false);
-  const { landDetails } = useProgramContext();
+  // const { landDetails } = useProgramContext();
 
   // Pass query params to update URL
   const handleLandingFilter = (landing) => {
@@ -34,7 +35,7 @@ const LandingContainer = () => {
     <div className={styles.InnerContainer}>
       <div className={styles.InnerContainerHeader}>Successful Landing</div>
       <div className={styles.GroupContainer}>
-        {landDetails.map((landing, index) => (
+        {SUCCESSFUL_LANDING.map((landing, index) => (
           <div key={index} className={styles.ButtonContainer}>
             <button
               className={

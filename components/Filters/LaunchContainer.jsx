@@ -2,13 +2,14 @@ import React, { useState } from "react";
 import styles from "../../styles/FilterContainer.module.css";
 import Router, { useRouter } from "next/router";
 import { useProgramContext } from "../../context/ProgramContext";
+import { SUCCESSFUL_LAUNCH } from "./constants";
 
 const LaunchContainer = () => {
   // Get current queries and append to the existing one
   const router = useRouter();
   const [launchingState, setLaunchingState] = useState();
   const [activeState, setActiveState] = useState(false);
-  const { launchDetails } = useProgramContext();
+  // const { launchDetails } = useProgramContext();
 
   // Pass query params to update URL
   const handleLaunchFilter = (launch) => {
@@ -32,7 +33,7 @@ const LaunchContainer = () => {
     <div className={styles.InnerContainer}>
       <div className={styles.InnerContainerHeader}>Successful Launch</div>
       <div className={styles.GroupContainer}>
-        {launchDetails.map((launch, index) => (
+        {SUCCESSFUL_LAUNCH.map((launch, index) => (
           <div key={index} className={styles.ButtonContainer}>
             <button
               className={
