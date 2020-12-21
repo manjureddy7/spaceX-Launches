@@ -2,10 +2,10 @@
 
 ## Feature :notebook: :closed_book: :green_book:
 
-1. Fully responsive (Mobile first).
+1. Fully responsive (Mobile first approach) website.
 2. User can filter program launches with available filter items on left pane.
 3. URL will show currently added filter along with filter highlight.
-4. Toggle on the select filter to remove filter.
+4. Toggle on the select filter to remove selected filter.
 
 ## Inside Tech :pushpin: :technologist:
 
