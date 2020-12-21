@@ -4,7 +4,7 @@
   justify-content: center;
   flex-direction: column;
   margin: 10px;
-  width: 90%;
+  flex: 1 0 100%;
   padding: 20px;
 }
 
@@ -16,7 +16,8 @@
 
 .ProgramImage {
   height: 200px;
-  width: 90%;
+  width: 200px;
+  flex: 1 0 20%;
   margin: 10px;
 }
 
@@ -30,4 +31,39 @@
 
 .ProgramDetails {
   color: #6367a3;
+}
+
+@media screen and (min-width: 700px) and (max-width: 1024px) {
+  .ProgramContainer {
+    background-color: white;
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    margin: 10px;
+    flex: 1 0 50%;
+    padding: 20px;
+  }
+}
+
+@media screen and (min-width: 1024px) and (max-width: 1440px) {
+  .ProgramContainer {
+    background-color: white;
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    margin: 10px;
+    flex: 1 0 25%;
+    padding: 20px;
+  }
+}
+@media screen and (min-width: 1440px) {
+  .ProgramContainer {
+    background-color: white;
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    margin: 10px;
+    flex: 1 0 25%;
+    padding: 20px;
+  }
 }

@@ -23,11 +23,11 @@ export const ProgramsContainer = () => {
 
   return (
     <div>
-      <div className={styles.RootContainer}>
-        {loading ? (
-          <h1>Loading...</h1>
-        ) : launchPrograms.length > 0 ? (
-          launchPrograms.map((program, index) => {
+      {loading ? (
+        <h1>Loading...</h1>
+      ) : launchPrograms.length > 0 ? (
+        <div className={styles.RootContainer}>
+          {launchPrograms.map((program, index) => {
             return (
               <div className={styles.IndividualProgram} key={index}>
                 <Program
@@ -41,13 +41,13 @@ export const ProgramsContainer = () => {
                 />
               </div>
             );
-          })
-        ) : (
-          <div className={styles.ErrorMessage}>
-            No Programs found for the applied search
-          </div>
-        )}
-      </div>
+          })}
+        </div>
+      ) : (
+        <div className={styles.ErrorMessage}>
+          No Programs found for the applied search
+        </div>
+      )}
     </div>
   );
 };
