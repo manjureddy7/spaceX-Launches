@@ -14,13 +14,13 @@
 3. Server side loaded pages.
 4. Added coverage for entire application.
 
-## Approach
+## Approach :thumbsup:
 
 1. Created simple & stand alone reusable components.
 2. Used Nextjs inbuilt useRouter & Router to get & add route parameteres from the url
 3. Update url based on the route params.
 
-## Challanged faced
+## Challanged faced :open_mouth:
 
 1. As the application heavily relies on images, special care should be taken to optimize performace of the page load.
 2. Improve page perforamane and others based on light house report.
@@ -32,10 +32,10 @@
 3. CSS Modules
 4. Vercel to deploy & github to host code
 
-## Live Production URL
+## Live Production URL :fire:
 
 Open [demo] (https://space-x-launches-blue.vercel.app/) url to see live demo of application
 
-## Lighthouse report
+## Lighthouse report :flashlight: :bulb
 
 See attached ![Alt text](./public/lighthouse_report.png "Lighhouse report")
