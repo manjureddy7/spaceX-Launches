@@ -30,6 +30,7 @@
 1. NextJS (React Framework)
 2. HTML
 3. CSS Modules
+4. Vercel to deploy & github to host code
 
 ## Live Production URL
 
