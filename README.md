@@ -1,13 +1,13 @@
 # :rocket: :rocket: :rocket: SpaceX Launches :rocket: :rocket: :rocket:
 
-## Feature
+## Feature :notebook: :closed_book: :green_book:
 
 1. Fully responsive (Mobile first).
 2. User can filter program launches with available filter items on left pane.
 3. URL will show currently added filter along with filter highlight.
 4. Toggle on the select filter to remove filter.
 
-## Inside Tech
+## Inside Tech :pushpin: :technologist:
 
 1. Unit test cases for all created components (by React Testing library).
 2. Inbuilt static analytic code check for production build.
