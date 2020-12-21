@@ -18,33 +18,35 @@ export const ProgramsContainer = () => {
   }, [landing, launch, year]);
 
   return (
-    <div className={styles.RootContainer}>
-      {loading ? (
-        <h1>Loading...</h1>
-      ) : launchPrograms.length > 0 ? (
-        launchPrograms.map((program) => {
-          return (
-            <div
-              className={styles.IndividualProgram}
-              key={program.flight_number}
-            >
-              <Program
-                name={program.mission_name}
-                id={program.flight_number}
-                missionIds={program.mission_id}
-                launchYear={program.launch_year}
-                successfulLaunch={program.launch_success}
-                successfulLanding={program.rocket.first_stage.cores}
-                image={program.links.flickr_images}
-              />
-            </div>
-          );
-        })
-      ) : (
-        <div className={styles.ErrorMessage}>
-          No Programs found for the applied search
-        </div>
-      )}
+    <div>
+      <div className={styles.RootContainer}>
+        {loading ? (
+          <h1>Loading...</h1>
+        ) : launchPrograms.length > 0 ? (
+          launchPrograms.map((program, index) => {
+            return (
+              <div className={styles.IndividualProgram} key={index}>
+                <Program
+                  name={program.mission_name}
+                  id={program.flight_number}
+                  missionIds={program.mission_id}
+                  launchYear={program.launch_year}
+                  successfulLaunch={program.launch_success}
+                  successfulLanding={program.rocket.first_stage.cores}
+                  image={program.links.flickr_images}
+                />
+              </div>
+            );
+          })
+        ) : (
+          <div className={styles.ErrorMessage}>
+            No Programs found for the applied search
+          </div>
+        )}
+      </div>
+      <div className={styles.Developer}>
+        <strong>Developed by:</strong> <sapn>Manoj Kumar Gangavarapu</sapn>
+      </div>
     </div>
   );
 };

@@ -12,9 +12,7 @@ const YearContainer = () => {
 
   // Handle Year Filter
   // Based on Active state, update Router
-  const handleLaunchYearFilter = (year) => {
-    setActiveState(!activeState);
-    setLaunchYear(year);
+  const handleLaunchYearFilter = async (year) => {
     if (!activeState) {
       Router.push({
         pathname: "/",
@@ -27,6 +25,8 @@ const YearContainer = () => {
         query: { ...restFilters },
       });
     }
+    setLaunchYear(year);
+    setActiveState(!activeState);
   };
   return (
     <div className={styles.InnerContainer} data-testid="YearContainer">

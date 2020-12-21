@@ -5,38 +5,71 @@
 
 .IndividualProgram {
   flex: 100%;
-  max-height: 544px;
+  max-height: 500px;
   overflow: auto;
+  box-sizing: border-box;
 }
 
 .ErrorMessage {
-  margin-top: 25%;
-  margin-left: 35%;
+  margin: 0 auto;
   border: 1px solid;
   padding: 15px 10px 15px 50px;
   color: #d8000c;
   background-color: #ffbaba;
 }
 
+.Developer {
+  display: flex;
+  justify-content: center;
+  margin: 25px 0px;
+}
+
 @media screen and (min-width: 700px) and (max-width: 1024px) {
   .IndividualProgram {
     flex: 50%;
-    max-height: 544px;
+    max-height: 500px;
     overflow: auto;
+    box-sizing: border-box;
+  }
+  .ErrorMessage {
+    margin-top: 25%;
+    margin-left: 35%;
+    border: 1px solid;
+    padding: 15px 10px 15px 50px;
+    color: #d8000c;
+    background-color: #ffbaba;
   }
 }
 
 @media screen and (min-width: 1024px) and (max-width: 1440px) {
   .IndividualProgram {
     flex: 25%;
-    max-height: 544px;
+    max-height: 500px;
     overflow: auto;
+    box-sizing: border-box;
+  }
+  .ErrorMessage {
+    margin-top: 25%;
+    margin-left: 35%;
+    border: 1px solid;
+    padding: 15px 10px 15px 50px;
+    color: #d8000c;
+    background-color: #ffbaba;
   }
 }
 @media screen and (min-width: 1440px) {
   .IndividualProgram {
     flex: 25%;
-    max-height: 544px;
+    max-height: 500px;
     overflow: auto;
+    box-sizing: border-box;
+  }
+  .ErrorMessage {
+    margin-top: 25%;
+    margin-left: 35%;
+    border: 1px solid;
+    padding: 15px 10px 15px 50px;
+    color: #d8000c;
+    background-color: #ffbaba;
   }
 }
