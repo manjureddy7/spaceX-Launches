@@ -8,23 +8,36 @@ const LaunchContainer = () => {
   const router = useRouter();
   const [launchingState, setLaunchingState] = useState();
   const [activeState, setActiveState] = useState(false);
+  const [defaultCase, setDefaultCase] = useState(false);
 
   // Pass query params to update URL
   const handleLaunchFilter = (launch) => {
     setActiveState(!activeState);
-    setLaunchingState(launch);
+
     if (!activeState) {
       Router.push({
         pathname: "/",
         query: { ...router.query, launch },
       });
+      setLaunchingState(launch);
+      setDefaultCase(!defaultCase);
+    } else if (launchingState !== launch) {
+      Router.push({
+        pathname: "/",
+        query: { ...router.query, launch },
+      });
+      setDefaultCase(true);
+      setLaunchingState(launch);
     } else {
       const { launch, ...restFilters } = router.query;
       Router.push({
         pathname: "/",
         query: { ...restFilters },
       });
+      setDefaultCase(false);
+      setLaunchingState(launch);
     }
+    setActiveState(!activeState);
   };
 
   return (
@@ -35,7 +48,8 @@ const LaunchContainer = () => {
           <div key={index} className={styles.ButtonContainer}>
             <button
               className={
-                launch === launchingState && activeState
+                (launchingState === launch && activeState) ||
+                (defaultCase && launchingState === launch)
                   ? styles.active
                   : styles.btn
               }

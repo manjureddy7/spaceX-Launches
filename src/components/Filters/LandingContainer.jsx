@@ -9,23 +9,35 @@ const LandingContainer = () => {
 
   const [landingState, setLandingState] = useState();
   const [activeState, setActiveState] = useState(false);
+  const [defaultCase, setDefaultCase] = useState(false);
 
   // Pass query params to update URL
   const handleLandingFilter = (landing) => {
     setActiveState(!activeState);
-    setLandingState(landing);
     if (!activeState) {
       Router.push({
         pathname: "/",
         query: { ...router.query, landing },
       });
+      setLandingState(landing);
+      setDefaultCase(!defaultCase);
+    } else if (landingState !== landing) {
+      Router.push({
+        pathname: "/",
+        query: { ...router.query, landing },
+      });
+      setDefaultCase(true);
+      setLandingState(landing);
     } else {
       const { landing, ...restFilters } = router.query;
       Router.push({
         pathname: "/",
         query: { ...restFilters },
       });
+      setDefaultCase(false);
+      setLandingState(landing);
     }
+    setActiveState(!activeState);
   };
 
   return (
@@ -38,7 +50,8 @@ const LandingContainer = () => {
           <div key={index} className={styles.ButtonContainer}>
             <button
               className={
-                landing === landingState && activeState
+                (landingState === landing && activeState) ||
+                (defaultCase && landingState === landing)
                   ? styles.active
                   : styles.btn
               }
