@@ -12,30 +12,30 @@ const LandingContainer = () => {
   const [defaultCase, setDefaultCase] = useState(false);
 
   // Pass query params to update URL
-  const handleLandingFilter = (landing) => {
+  const handleLandingFilter = (land_success) => {
     setActiveState(!activeState);
     if (!activeState) {
       Router.push({
         pathname: "/",
-        query: { ...router.query, landing },
+        query: { ...router.query, land_success },
       });
-      setLandingState(landing);
+      setLandingState(land_success);
       setDefaultCase(!defaultCase);
-    } else if (landingState !== landing) {
+    } else if (landingState !== land_success) {
       Router.push({
         pathname: "/",
-        query: { ...router.query, landing },
+        query: { ...router.query, land_success },
       });
       setDefaultCase(true);
-      setLandingState(landing);
+      setLandingState(land_success);
     } else {
-      const { landing, ...restFilters } = router.query;
+      const { land_success, ...restFilters } = router.query;
       Router.push({
         pathname: "/",
         query: { ...restFilters },
       });
       setDefaultCase(false);
-      setLandingState(landing);
+      setLandingState(land_success);
     }
     setActiveState(!activeState);
   };

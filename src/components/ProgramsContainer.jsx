@@ -8,14 +8,18 @@ export const ProgramsContainer = () => {
   const router = useRouter();
   const [loading, setLoading] = useState(true);
   const [launchPrograms, setLaunchPrograms] = useState([]);
-  const { landing, launch, year } = router.query;
+  const { land_success, launch_success, launch_year } = router.query;
 
   useEffect(async () => {
     setLoading(true);
-    const response = await getLaunchPrograms(landing, launch, year);
+    const response = await getLaunchPrograms(
+      land_success,
+      launch_success,
+      launch_year
+    );
     setLaunchPrograms(response);
     setLoading(false);
-  }, [landing, launch, year]);
+  }, [land_success, launch_success, launch_year]);
 
   return (
     <div>

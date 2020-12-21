@@ -16,6 +16,6 @@ export const LAUNCH_YEAR = [
   "2020",
 ];
 
-export const SUCCESSFUL_LAUNCH = ["True", "False"];
+export const SUCCESSFUL_LAUNCH = ["true", "false"];
 
-export const SUCCESSFUL_LANDING = ["True", "False"];
+export const SUCCESSFUL_LANDING = ["true", "false"];

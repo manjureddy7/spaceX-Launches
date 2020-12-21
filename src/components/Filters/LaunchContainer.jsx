@@ -11,31 +11,31 @@ const LaunchContainer = () => {
   const [defaultCase, setDefaultCase] = useState(false);
 
   // Pass query params to update URL
-  const handleLaunchFilter = (launch) => {
+  const handleLaunchFilter = (launch_success) => {
     setActiveState(!activeState);
 
     if (!activeState) {
       Router.push({
         pathname: "/",
-        query: { ...router.query, launch },
+        query: { ...router.query, launch_success },
       });
-      setLaunchingState(launch);
+      setLaunchingState(launch_success);
       setDefaultCase(!defaultCase);
-    } else if (launchingState !== launch) {
+    } else if (launchingState !== launch_success) {
       Router.push({
         pathname: "/",
-        query: { ...router.query, launch },
+        query: { ...router.query, launch_success },
       });
       setDefaultCase(true);
-      setLaunchingState(launch);
+      setLaunchingState(launch_success);
     } else {
-      const { launch, ...restFilters } = router.query;
+      const { launch_success, ...restFilters } = router.query;
       Router.push({
         pathname: "/",
         query: { ...restFilters },
       });
       setDefaultCase(false);
-      setLaunchingState(launch);
+      setLaunchingState(launch_success);
     }
     setActiveState(!activeState);
   };

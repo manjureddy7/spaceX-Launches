@@ -45,6 +45,7 @@
   border: none;
   width: 100%;
   margin: 5px;
+  text-transform: capitalize;
 }
 
 .active {
@@ -56,4 +57,5 @@
   border: none;
   width: 100%;
   margin: 5px;
+  text-transform: capitalize;
 }

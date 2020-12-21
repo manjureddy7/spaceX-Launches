@@ -13,28 +13,28 @@ const YearContainer = () => {
 
   // Handle Year Filter
   // Based on Active state, update Router
-  const handleLaunchYearFilter = async (year) => {
+  const handleLaunchYearFilter = async (launch_year) => {
     if (!activeState) {
       Router.push({
         pathname: "/",
-        query: { ...router.query, year },
+        query: { ...router.query, launch_year },
       });
-      setLaunchYear(year);
+      setLaunchYear(launch_year);
       setDefaultCase(!defaultCase);
-    } else if (launchYear !== year) {
+    } else if (launchYear !== launch_year) {
       Router.push({
         pathname: "/",
-        query: { ...router.query, year },
+        query: { ...router.query, launch_year },
       });
       setDefaultCase(true);
-      setLaunchYear(year);
+      setLaunchYear(launch_year);
     } else {
-      const { year, ...restFilters } = router.query;
+      const { launch_year, ...restFilters } = router.query;
       Router.push({
         pathname: "/",
         query: { ...restFilters },
       });
-      setLaunchYear(year);
+      setLaunchYear(launch_year);
       setDefaultCase(false);
     }
     setActiveState(!activeState);
