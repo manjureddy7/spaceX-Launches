@@ -24,6 +24,8 @@
 
 1. As the application heavily relies on images, special care should be taken to optimize performace of the page load.
 2. Improve page perforamane and others based on light house report.
+3. For some launches there is no image in the api response. So i have provided default image if API doesn't contain any.
+4. Also land_success filter from API doesn't work properly sometimes.
 
 ### Tech Stack used :book:
 
