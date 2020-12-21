@@ -1,7 +1,7 @@
 import React, { useState } from "react";
-import styles from "../../styles/FilterContainer.module.css";
+import styles from "../../../styles/FilterContainer.module.css";
 import Router, { useRouter } from "next/router";
-import { SUCCESSFUL_LANDING } from "./constants";
+import { SUCCESSFUL_LANDING } from "../constants";
 
 const LandingContainer = () => {
   // Get current queries and append to the existing one
@@ -21,7 +21,6 @@ const LandingContainer = () => {
       });
     } else {
       const { landing, ...restFilters } = router.query;
-      console.log("rest filters are", restFilters);
       Router.push({
         pathname: "/",
         query: { ...restFilters },

@@ -1,7 +1,7 @@
 import React from "react";
 import FilterContainer from "./FilterContainer";
 import ProgramsContainer from "./ProgramsContainer";
-import styles from "../styles/Container.module.css";
+import styles from "../../styles/Container.module.css";
 
 const Container = () => {
   return (

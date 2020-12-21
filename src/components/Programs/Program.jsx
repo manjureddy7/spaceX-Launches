@@ -1,9 +1,5 @@
 import React from "react";
-import Image from "next/image";
-import styles from "../../styles/Program.module.css";
-
-// const DEFAULT_IMAGE_URL =
-//   "https://techcrunch.com/wp-content/uploads/2019/09/Starship-Mk1-Day.jpg";
+import styles from "../../../styles/Program.module.css";
 
 // To improve perfomance
 const DEFAULT_IMAGE_URL = "/default.webp";
@@ -30,12 +26,6 @@ const Program = ({
           height="200px"
           width="200px"
         />
-        {/* <Image
-          className={styles.ProgramImage}
-          src={missionImage}
-          alt="SPACE X MISSION IMAGE"
-          layout="fill"
-        /> */}
       </div>
       <p className={styles.ProgramName}>
         {name} {` `}#{id}

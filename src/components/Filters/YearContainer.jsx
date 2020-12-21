@@ -1,7 +1,7 @@
 import React, { useState } from "react";
-import styles from "../../styles/FilterContainer.module.css";
+import styles from "../../../styles/FilterContainer.module.css";
 import Router, { useRouter } from "next/router";
-import { LAUNCH_YEAR } from "./constants";
+import { LAUNCH_YEAR } from "../constants";
 
 const YearContainer = () => {
   const [activeState, setActiveState] = useState(false);

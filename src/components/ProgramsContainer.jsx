@@ -1,8 +1,8 @@
 import React, { useState, useEffect } from "react";
 import Program from "./Programs/Program";
-import styles from "../styles/ProgramContainer.module.css";
+import styles from "../../styles/ProgramContainer.module.css";
 import { useRouter } from "next/router";
-import getLaunchPrograms from "./data/LaunchPrograms";
+import getLaunchPrograms from "./api/getLaunchPrograms";
 
 export const ProgramsContainer = () => {
   const router = useRouter();

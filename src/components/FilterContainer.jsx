@@ -2,7 +2,7 @@ import React from "react";
 import YearContainer from "./Filters/YearContainer";
 import LaunchContainer from "./Filters/LaunchContainer";
 import LandingContainer from "./Filters/LandingContainer";
-import styles from "../styles/FilterContainer.module.css";
+import styles from "../../styles/FilterContainer.module.css";
 
 const FilterContainer = () => {
   return (

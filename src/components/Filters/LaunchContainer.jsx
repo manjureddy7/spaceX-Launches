@@ -1,7 +1,7 @@
 import React, { useState } from "react";
-import styles from "../../styles/FilterContainer.module.css";
+import styles from "../../../styles/FilterContainer.module.css";
 import Router, { useRouter } from "next/router";
-import { SUCCESSFUL_LAUNCH } from "./constants";
+import { SUCCESSFUL_LAUNCH } from "../constants";
 
 const LaunchContainer = () => {
   // Get current queries and append to the existing one
