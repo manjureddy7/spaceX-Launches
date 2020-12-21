@@ -1,4 +1,4 @@
-# SpaceX Launches
+# :rocket: :rocket: :rocket: SpaceX Launches :rocket: :rocket: :rocket:
 
 ## Feature
 
@@ -25,7 +25,7 @@
 1. As the application heavily relies on images, special care should be taken to optimize performace of the page load.
 2. Improve page perforamane and others based on light house report.
 
-### Tech Stack used
+### Tech Stack used :book:
 
 1. NextJS (React Framework)
 2. HTML
