@@ -12,4 +12,4 @@ Open (https://space-x-launches-blue.vercel.app/) url to see live demo of applica
 
 ## Lighthouse report
 
-See attached ![Alt text]('./public/lighthouse_report.png' "Optional title")
+See attached ![Alt text](./public/lighthouse_report.png "Optional title")
