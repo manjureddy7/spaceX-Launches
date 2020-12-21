@@ -24,7 +24,7 @@ export const ProgramsContainer = () => {
   return (
     <div>
       {loading ? (
-        <h1>Loading...</h1>
+        <h1>Loading SpaceX Launch Programs...</h1>
       ) : launchPrograms.length > 0 ? (
         <div className={styles.RootContainer}>
           {launchPrograms.map((program, index) => {
