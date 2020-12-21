@@ -44,9 +44,6 @@ export const ProgramsContainer = () => {
           </div>
         )}
       </div>
-      <div className={styles.Developer}>
-        <strong>Developed by:</strong> <sapn>Manoj Kumar Gangavarapu</sapn>
-      </div>
     </div>
   );
 };

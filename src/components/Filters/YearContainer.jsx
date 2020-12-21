@@ -5,7 +5,8 @@ import { LAUNCH_YEAR } from "../constants";
 
 const YearContainer = () => {
   const [activeState, setActiveState] = useState(false);
-  const [launchYear, setLaunchYear] = useState(); // This will help us to set active class
+  const [launchYear, setLaunchYear] = useState();
+  const [defaultCase, setDefaultCase] = useState(false);
 
   // Get current queries and append to the existing one
   const router = useRouter();
@@ -18,14 +19,24 @@ const YearContainer = () => {
         pathname: "/",
         query: { ...router.query, year },
       });
+      setLaunchYear(year);
+      setDefaultCase(!defaultCase);
+    } else if (launchYear !== year) {
+      Router.push({
+        pathname: "/",
+        query: { ...router.query, year },
+      });
+      setDefaultCase(true);
+      setLaunchYear(year);
     } else {
       const { year, ...restFilters } = router.query;
       Router.push({
         pathname: "/",
         query: { ...restFilters },
       });
+      setLaunchYear(year);
+      setDefaultCase(false);
     }
-    setLaunchYear(year);
     setActiveState(!activeState);
   };
   return (
@@ -36,7 +47,10 @@ const YearContainer = () => {
           <div key={index} className={styles.ButtonContainer}>
             <button
               className={
-                launchYear === year && activeState ? styles.active : styles.btn
+                (launchYear === year && activeState) ||
+                (defaultCase && launchYear === year)
+                  ? styles.active
+                  : styles.btn
               }
               onClick={() => handleLaunchYearFilter(year)}
             >

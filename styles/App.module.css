@@ -4,3 +4,10 @@
 .AppHeader {
   color: #0e0e0e;
 }
+
+.Developer {
+  display: flex;
+  justify-content: center;
+  margin: 25px 0px;
+  padding: 20px;
+}
