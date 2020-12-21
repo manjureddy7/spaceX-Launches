@@ -39,3 +39,7 @@ Open [demo] (https://space-x-launches-blue.vercel.app/) url to see live demo of 
 ## Lighthouse report :flashlight: :bulb:
 
 Find below image of light house report. ![Alt text](./public/lighthouse_report.png "Lighhouse report")
+
+## Deployment log
+
+Image of deployment logs. ![Alt text](./public/deployement_log.png "Lighhouse report")
